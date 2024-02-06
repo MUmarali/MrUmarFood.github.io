@@ -1,0 +1,832 @@
+body{
+    -webkit-font-smoothing:antialiased;
+    height: 4000px;
+}
+
+@font-face {
+    font-family:raleway-bold ;
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family:raleway-extrabold ;
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+
+
+@font-face {
+    font-family: raleway-black;
+    src: url(../fonts/Raleway-Black.ttf);
+}
+@font-face {
+    font-family: raleway-regular;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: raleway-medium;
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: raleway-Semibold;
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family:raleway-extrabold ;
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+/* colors */
+/* The :root pseudo-class is often used to define global CSS variables */
+:root{
+    --primary:#EEBF00;
+    --secondary: #232B38;
+    --ternary: #6C6C6C;
+    --danger: #FE4545;
+    --pure: #FEFEFE;
+    --light: #f0f0f0;
+    --heaven:#FFFFFF;
+    --footer: #2D333F;
+    
+}
+
+/* reset default browser settings */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media(min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media(min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media(min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        max-width: 1152px; 
+    }
+}
+
+/* <<*************Utility Class***************>> */
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+/* Topbar */
+header.topbar{
+    background-color: var(--secondary);
+    padding: 1.5rem 0;
+    font-family: raleway-semibold;
+}
+
+header.topbar img{
+    padding-right: 0.5rem;
+    
+}
+/* login information */
+.auth  a{
+    color: var(--heaven);
+    text-decoration: none;
+}
+.auth span{
+    color: var(--heaven);
+    padding: 0 0.5rem;
+}
+/* Designing Nevigation */
+nav .phone img{
+    padding-right: 1rem;
+}
+
+nav .clock img{
+    padding-right: 1rem;
+}
+nav .phone h6,nav .clock h6{
+    font-family: raleway-medium;
+    color: var(--ternary);
+}
+nav .phone h5,nav .clock h5{
+font-family: raleway-semibold;
+}
+nav .phone h5{
+    margin-bottom: 0.2rem;
+}
+nav .clock h5{
+    margin-bottom: 0.2rem;
+}
+.navigation{
+    margin-top: 2rem;
+}
+ /* Now Designing main nevigation bar */
+ .bar a{
+    text-decoration:none;
+    color:var(--secondary);
+    font-family:"Raleway-semibold";
+    font-size:1rem;
+    padding:1rem 1.5rem;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+ }
+ .bar{
+    margin-top: 2rem;
+    
+ }
+  .bar .active{
+    background-color: var(--primary);
+    color: var(--pure);
+ }
+
+
+
+.bar a:hover{
+    background-color: var(--primary);
+    color: var(--pure);
+    
+}
+
+.magic-shadow{
+    position: relative;
+    background:var(--heaven);
+}
+.magic-shadow:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:69px;
+    background-image:url(../icons/shadow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom:-22px;
+    z-index:-1;
+}
+
+/* Now design main header paragraph */
+
+.welcome span{
+    padding-right: 0.5rem;
+    font-family: raleway-semibold;
+}
+.tagline h1{
+    font-family: raleway-extrabold;
+    font-size: 2.2rem;
+}
+
+.tagline span{
+    color: var(--primary);
+}
+
+.tagline p{
+    font-family: "Raleway-medium";
+    width:50%;
+    line-height:1.5;
+    margin-bottom:1rem;}
+header.hero{
+    height:600px;
+    background-image:url(../images/hero.png);
+    
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+ 
+
+    /* Utility classes for buttons */
+    .btn{
+        padding:0.75rem 0.75rem;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    line-height:0.8;
+    font-size:1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border:1px solid transparent;
+    }
+
+    /* Utility class for buttons */
+
+    .btn-primary {
+        background:var(--primary);
+        color:var(--heaven);
+    }
+    .btn-primary:hover{
+        background:var(--heaven);
+        color:var(--primary); 
+        border:1px solid var(--primary);
+    }
+    .btn-secondary{
+        background:var(--secondary);
+        color:var(--heaven); 
+    }
+    .btn-secondary:hover{
+        background:var(--heaven);
+        color:var(--secondary); 
+        border:1px solid var(--secondary);
+    }
+    header.hero button:first-child{
+        margin-right:0.50rem;
+    }
+
+    header.hero .header-image{
+        position: absolute;
+        top: -40px;
+        right: 40px;
+        
+    }
+    header .container{
+        position: relative;
+    }
+
+    /* Now Designing Section */
+    section{
+        padding: 3rem 0;
+    }
+
+    section.top-products{
+        background-color: var(--light);
+    }
+/* Design utility class for section heading */
+
+.section-heading{
+    font-family: raleway-bold;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    text-align: center;
+}
+
+/* Now designing xodo element */
+
+.section-heading:after{
+content: '';
+display: block;
+width: 100%;
+height: 30px;
+background-image: url(../icons/hr.svg);
+background-repeat: no-repeat;
+position: absolute;
+background-position: center;
+bottom: -40px;
+
+}
+
+section.top-products .container .slider{
+    background-color: var(--heaven);
+    margin-top: 3rem;
+    border-radius: 7px;
+    
+    
+}
+
+section.top-products .slider .image-1 img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-top: 1rem;
+    opacity: 0.8rem;
+    
+}
+
+hr{
+    margin: 1rem 0;
+}
+
+section.top-products .slider h2{
+    font-family: raleway-bold;
+    
+}
+
+/* This the utility class */
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+section.top-products .slider .stars img{
+    padding-right: 7px;
+    margin: 0.4rem 0;
+}
+
+section.top-products .slider .price{
+    font-family: raleway-medium;
+    color: var(--danger);
+}
+
+section.top-products .slider .button button{
+    border:2px solid var(--primary);
+    background: var(--heaven);
+    border-radius: 4px;
+    transition: all .3s ease;
+    /* padding: 5px; */
+    font-family: raleway-medium;
+    /* color: var(--primary); */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 0.7rem 0;
+    cursor: pointer;
+    
+}
+
+section.top-products .slider .button button:hover{
+background: var(--primary);
+color: var(--heaven);
+}
+
+section.top-products .slider .button button img{
+    background:var(--primary);
+    padding:0.20rem;
+    height:30px;
+    /* margin-right:rem; */
+    
+
+}
+
+section.top-products .slider .button button span{
+    padding: 0 10px;
+}
+/* now maintain the slider */
+
+.slick-slide{
+    margin:0 27px;
+}
+.slick-list{
+    margin:0 -27px;
+}
+
+
+.top-products .slider-btn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--primary);
+}
+
+.prev-btn{
+    position:absolute;
+    top:46%;
+    left:-3rem;
+    z-index: 1;
+}
+.next-btn{
+    position:absolute;
+    top:46%;
+    right:-3rem;
+    z-index: 1;
+}
+
+.top-products .slider{
+    position: relative;
+}
+
+/* Now Designing button of view more in slider  */
+button.btn{
+    margin-top: 2rem;
+
+}
+
+/* Now Designing About Fresh Meal Section  */
+.More-information .container .top-heading{
+    margin-bottom: 4rem;
+}
+
+.More-information .container .full-information .heading {
+    /* width: 50%; */
+    font-family: raleway-bold;
+    margin-top: 2rem;
+   
+}
+
+.More-information .container .full-information .heading p {
+    /* width: 100%; */
+    font-family: raleway-medium;
+    font-size: 16px;
+    color: var(--ternary);
+    margin-top: 2rem;
+}
+
+.yogurt-img img{
+    width: 500px;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+/* Now designing our services section */
+.our-services{
+    background-color: var(--light);
+}
+
+/* .our-services .container .top-heading{
+    padding-bottom: 1rem;
+} */
+
+/* .card-wraper .delivery{
+    background-color: var(--heaven);
+    margin-top: 3rem;
+    border-radius: 7px;
+   text-align: center;
+   
+}
+
+.card-wraper .delivery  h2{
+    padding: 0.5rem 0;
+    font-family: raleway-bold
+    
+    
+}
+
+.card-wraper .delivery p{
+    padding-top: 2rem;
+    font-family: raleway-medium;
+    width: 40%;
+    
+    
+} */
+
+
+.card-wraper .delivery {
+    background-color: var(--heaven);
+    
+    border-radius: 7px;
+    text-align: center;
+    padding: 2rem; 
+    position: relative;
+    margin-right: 2rem;
+    
+    
+}
+.our-services .card-wraper{
+    margin-right: -2rem;
+    margin-top: 6rem;
+}
+
+.card-wraper .delivery h2 {
+    padding: 0.5rem 0;
+    font-family: raleway-bold;
+    font-size: 25px;
+}
+
+.card-wraper .delivery p {
+    margin-top: 1rem; /* Adjust margin for spacing */
+    font-family: raleway-medium;
+    /* width: 40%; Adjust width to your preference */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    font-size: 19px;
+    color: var(--ternary);
+}
+
+.card-wraper .delivery .transport{
+    top: -45px; 
+    position: absolute;
+     left: 39%;
+    /* transform: translateX(-50%); */
+}
+
+.head h2{
+    color: var(--primary);
+}
+
+/* Now Designing the section of big deals of the week */
+ .big-deals .timer div{
+    margin-right: 1rem;
+    background: var(--primary);
+    height: 150px;
+    width: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+ .big-deals .timer{
+    margin-top: 4rem;
+    margin-right: -1rem;
+}
+
+.big-deals .timer div span:first-child{
+    color: var(--light);
+    font-size: 45px;
+    font-family: raleway-bold;
+}
+
+.big-deals .timer div span:last-child{
+    color: var(--light);
+    font-family: raleway-medium;
+}
+
+.big-deals{
+    background: linear-gradient(
+        rgba(35,43,56,0.7),
+        rgba(35,43,56,0.7)
+    ), url(../images/food-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.big-deals h1{
+    color: var(--light);
+}
+
+/* Now designing the latest news section */
+.card-wraper .card img{
+    width: 100%;
+}
+
+.card-wraper .card{
+    margin-top: 4rem;
+    background: var(--heaven);
+    margin-right: 1rem;
+}
+
+section.latest-news{
+    background:var(--light);
+ 
+}
+
+.latest-news .card-wraper{
+    margin-right: -1rem;
+    border-radius: 4px;
+}
+
+ .date{
+   
+    font-family: raleway-medium;
+    font-size: 15px;
+} 
+
+.card-date div span:first-child{
+   
+    font-size: 15px;
+}
+
+.card-date div span:last-child{
+   
+    font-size: 15px;
+}
+.card .card-content{
+    margin-top: 1rem;
+    margin: 20px 20px;
+}
+.card-content h2{
+    font-size: 20px;
+    font-family: raleway-bold;
+    margin: 10px 0;
+}
+
+.card-content p{
+    
+    font-family: raleway-medium;
+    color: var(--ternary);
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* Now designing news letter */
+section.newsletter{
+    background: var(--primary);
+}
+
+.newsletter-content{
+    margin-top: 2rem;
+}
+.newsletter-content h1{
+    margin-bottom: 1rem;
+    font-family: raleway-bold;
+}
+
+.newsletter-content p{
+    margin-bottom: 1rem;
+    
+    font-family: raleway-medium;
+}
+
+span.subscribe{
+    background-color: var(--heaven);
+    padding: 10px 10px;
+    border-radius: 6px;
+}
+span.subscribe button{
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 7px 20px;
+    border-radius: 4px;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: var(--heaven);
+    font-family: raleway-medium;
+    
+}
+
+span.subscribe button:hover{
+    transition: all 0.8s;
+    background: var(--heaven);
+    color: var(--primary);
+}
+.subscribe input{
+    border: none;
+    
+    
+    
+}
+
+.subscribe{
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--heaven);
+    padding: 10px 10px;
+    border-radius: 6px;
+}
+
+.newsletter img{
+    width: 450px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.newsletter {
+    justify-content: center;
+}
+
+/* now design contact us section  */
+.contact-us{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+section.contact-us .contact-info-wrapper{
+    flex: 1;
+   
+}
+
+
+section.contact-us .map{
+    flex: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+section.contact-us .contact-info{
+    display:flex;
+    justify-content: center;
+}
+
+section.contact-us .contact-info >div > div{
+    display: flex;
+    margin-bottom: 50px;
+}
+.contact-info-wrapper h1{
+    margin-top: 3rem;
+}
+
+section.contact-us .contact-info >div{
+    margin-top: 4rem;
+}
+
+section.contact-us .contact-info >div > div > div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+   font-family: raleway-medium;
+   color: var(--ternary);
+
+}
+
+section.contact-us .contact-info >div > div > div span:first-child{
+    font-family: raleway-bold;
+    color: black;
+}
+
+/* now designing footer section  */
+footer{
+    background: var(--footer);
+    padding: 3rem 0;
+}
+footer .container{
+    display: flex;
+    color: var(--pure);
+}
+
+footer .box{
+    flex: 1;
+    margin-right: 2rem;
+    text-align: center;
+    
+}
+
+footer .instagram-api img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer .instagram-api .post-wrap > div {
+    width: calc(33.33% - 10px); /* Adjusted width for three images per row */
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Added to include padding and border in width calculation */
+}
+
+footer .instagram-api .post-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .box h3{
+    font-family: raleway-bold;
+    margin-bottom: 10px;
+}
+
+footer .box h3{
+    border-bottom: 1px solid var(--primary);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+footer .box p{
+    font-family: raleway-medium;
+}
+
+footer .box ul li a{
+    text-decoration: none;
+    color: var(--pure);
+   font-family: raleway-regular;
+   
+
+   
+}
+footer .box ul li a:hover{
+    color: var(--primary);
+    transition: all 0.8s;
+    
+}
+
+footer .box ul{
+    list-style: none;
+}
+footer .box ul li {
+    padding-bottom: 10px;
+}
+
+footer.copyright{
+    background: var(--secondary);
+    color: var(--pure);
+    text-align: center;
+    font-family: raleway-medium;
+    padding: 1rem 0;
+}
+
+footer.copyright a{
+    text-decoration: none;
+    color: var(--primary);
+    
+}
+
+
+
+
